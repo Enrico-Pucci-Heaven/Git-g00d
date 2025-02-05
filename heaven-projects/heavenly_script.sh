@@ -1,11 +1,37 @@
-In the world of Heaven, not all is as it seems. The celestial beings have locked away a secret, a divine flag that holds the key to eternal knowledge. Only those worthy of Pucci's gaze will be able to unveil it. But beware, for the path is not straightforward. It requires wit, patience, and the courage to delve into the unknown.
+#!/bin/bash
 
-The flag lies hidden within the archives of the Heavens, encrypted by divine forces. To find it, one must decrypt the code left behind by Pucci himself. Only the righteous will be able to solve this celestial puzzle.
+# heavenly_script.sh - A celestial script by Pucci for divine tasks
 
-The flag is close. Can you feel it?
+echo "Welcome to Pucci's Heavenly Script!"
+echo "This script will help you perform divine tasks on your system."
 
-Here it is, divine and untouchable:
+# Check if the user is root (admin privileges)
+if [ "$(id -u)" -ne 0 ]; then
+    echo "You need to run this script as root. Exiting..."
+    exit 1
+fi
 
-ectf{3t3rn4l_H34v3n_Pucc1_R3v34ls_Th3_Truth}
+# Heavenly maintenance: update and upgrade the system
+echo "Updating the system to the latest divine version..."
+apt update && apt upgrade -y
+echo "System is now divinely upgraded."
 
-Your journey is far from over, but you have made it to the first step. The true test awaits.
+# Backup important files
+echo "Creating a backup of important files..."
+mkdir -p /root/backup
+cp -r /home/$USER/Documents /root/backup/
+echo "Backup complete. Files are safely stored in /root/backup."
+
+# A celestial task: check disk space and remind user to keep the heavens clean
+echo "Checking available disk space for heavenly purposes..."
+df -h
+
+echo "Reminder: Keep the heavens (your system) clean and free of clutter!"
+
+# Heavenly cleanup: remove unnecessary files
+echo "Performing celestial cleanup..."
+apt autoremove -y
+echo "Celestial cleanup complete. Your system is lighter than ever!"
+
+# Final message from Pucci
+echo "Thank you for using Pucci's Heavenly Script. May your system always be divine."
